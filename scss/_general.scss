@@ -1,0 +1,570 @@
+@import "mixins";
+
+header {
+  position: relative;
+}
+
+.container {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header nav {
+  min-height: 50px;
+  background: #212121;
+
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 70px;
+  margin: 0;
+  list-style: none;
+  &_link {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 15px;
+    color: #ffffff;
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+  &_item {
+    border-right: 2px dotted black;
+    padding-right: 45px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+header {
+  .subheader {
+    min-height: 84px;
+    background: rgba(0, 0, 0, 0.6);
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    &_logo {
+      display: block;
+      max-width: 100%;
+      margin-top: 17px;
+    }
+
+    &_official {
+      font-weight: 100;
+      font-size: 13px;
+      color: #ffffff;
+      margin-top: 6px;
+    }
+
+    &_call {
+      font-weight: 300;
+      font-size: 12px;
+      text-align: right;
+      color: #ffffff;
+      margin-top: 19px;
+    }
+
+    &_phone {
+      font-weight: 400;
+      font-size: 22px;
+      display: flex;
+      text-align: right;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 22px;
+      margin-top: 8px;
+      display: block;
+    }
+
+    &_btn {
+      width: 172px;
+      height: 46px;
+      background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+      box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      border: none;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+      margin-top: 19px;
+      &:hover {
+        @include btn_hover;
+      }
+    }
+  }
+}
+
+.promo {
+  min-height: 800px;
+  background: url("../img/uber_bg.jpg") center center/cover no-repeat;
+  padding: 140px 0 185px 0;
+  margin-top: 50px;
+
+  &_header {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  &_subheader {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 22px;
+  }
+
+  &_descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 22px;
+  }
+
+  &_btn {
+    width: 259px;
+    height: 63px;
+    background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+    margin: 115px auto 0 auto;
+    display: block;
+
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:hover {
+      @include btn_hover;
+    }
+  }
+}
+
+.label {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  width: 115px;
+  height: 27px;
+  background: #000000;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222222;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  color: #222222;
+  margin-top: 5px;
+}
+
+.benefits {
+  padding: 20px 0 64px 0;
+
+  &_row {
+    margin-top: 16px;
+  }
+
+  .col-md-6 {
+    padding: 0;
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    padding-left: 33px;
+    margin-top: 26px;
+  }
+
+  &_round {
+    width: 116px;
+    height: 116px;
+    background: #1eacc7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-right: 25px;
+  }
+
+  &_block {
+    width: 70%;
+  }
+
+  &_title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #1eacc7;
+  }
+
+  &_descr {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    color: #202020;
+  }
+}
+
+.mobile {
+  min-height: 864px;
+  padding: 48px 0 80px 0;
+  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+
+  .row {
+    margin-top: 30px;
+  }
+
+  &_item {
+    width: 320px;
+    height: 280px;
+    margin: 0 auto;
+    margin-bottom: 19px;
+    padding-top: 88.5px;
+    position: relative;
+
+    &_subtitle {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    &_plus {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 29px;
+      height: 29px;
+      margin: 0 auto;
+      background: #000000;
+      border-radius: 100%;
+      position: absolute;
+      bottom: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 3px;
+        background-color: $main-color;
+        transition: 0.5s all;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 14px;
+        background-color: $main-color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s all;
+      }
+
+      &:hover:after,
+      &:hover:before {
+        background-color: $second-color;
+      }
+    }
+  }
+
+  &_item_1 {
+    background: url("../img/Card1.jpg") center center/cover no-repeat;
+  }
+  &_item_2 {
+    background: url("../img/Card2.jpg") center center/cover no-repeat;
+  }
+  &_item_3 {
+    background: url("../img/Card3.jpg") center center/cover no-repeat;
+  }
+  &_item_4 {
+    background: url("../img/Card4.jpg") center center/cover no-repeat;
+  }
+  &_item_5 {
+    background: url("../img/Card5.jpg") center center/cover no-repeat;
+  }
+  &_item_6 {
+    background: url("../img/Card6.jpg") center center/cover no-repeat;
+  }
+}
+
+.car {
+  position: relative;
+  min-height: 900px;
+  background: #070716;
+  padding-top: 57px;
+
+  .label {
+    color: #070716;
+    background: #ffffff;
+  }
+
+  .title {
+    color: #ffffff;
+  }
+
+  .subtitle {
+    color: #ffffff;
+  }
+
+  &_uber {
+    background: url("../img/Car.png") center center/cover no-repeat;
+    width: 759px;
+    height: 480px;
+    margin: 0 auto;
+    margin-top: 54px;
+    z-index: 2;
+    position: relative;
+  }
+
+  &_cover {
+    background: url("../img/Cover.jpg") center center/cover no-repeat;
+    height: 397px;
+    position: absolute;
+    width: 100%;
+    // top: 498px;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &_descr {
+    width: 327px;
+    height: 49px;
+    margin: 0 auto;
+    padding-top: 210px;
+
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: #222222;
+  }
+  .xs-visible.car_descr {
+    display: none;
+  }
+}
+
+.require {
+  padding: 68px 0 87px 0;
+
+  &_block {
+    margin: 33px 0;
+  }
+
+  &_block.nmb {
+    margin-bottom: 0;
+  }
+
+  &_title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: #1ca8c3;
+  }
+
+  &_title.red {
+    color: #ff5656;
+  }
+
+  &_list {
+    list-style-type: none;
+    padding-left: 50px;
+    margin-top: 22px;
+  }
+
+  li {
+    position: relative;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 8px;
+
+    &:before {
+      content: "";
+      width: 21px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      left: -32px;
+      top: 3px;
+      background: url("../icons/check_blue.svg") center center/cover no-repeat;
+    }
+  }
+
+  .red li::before {
+    background: url("../icons/check_red.svg") center center/cover no-repeat;
+  }
+
+  &_descr {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
+    color: #1ca8c3;
+  }
+}
+
+.world {
+  min-height: 717px;
+  padding: 50px 0;
+  background: url("../img/world_bg.jpg") center center/contain no-repeat #080816;
+  position: relative;
+
+  .label {
+    color: #070716;
+    background: #ffffff;
+  }
+
+  .title,
+  .subtitle {
+    color: #ffffff;
+  }
+
+  &_link {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1fbad6;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.footer {
+  min-height: 156px;
+  padding: 14px 22px 10.5px 22px;
+  position: relative;
+
+  &_devider {
+    width: 301px;
+    height: 4px;
+    background: #1fbad6;
+    margin: 0 auto;
+  }
+
+  &_menu {
+    width: 365px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-left: 0;
+    margin-top: 35px;
+
+    a {
+      color: #070716;
+    }
+  }
+
+  &_menu.second {
+    width: 390px;
+    font-size: 11px;
+    margin-top: 15px;
+
+    a {
+      color: #999999;
+    }
+  }
+
+  &_language {
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1fbad6;
+    margin-top: 15px;
+  }
+
+  &_social {
+    display: flex;
+    justify-content: space-between;
+    width: 158px;
+    position: absolute;
+    top: 50px;
+
+    &_item {
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background: #070716;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &_links {
+    position: absolute;
+    width: 296px;
+    height: 27px;
+    right: 21px;
+    top: 52px;
+    background-image: url(../icons/links.png);
+  }
+}
+
+.xs-visible.subheader_phone {
+  display: none;
+}

@@ -1,0 +1,388 @@
+@media (min-width: 992px) {
+  .benefits {
+    .row {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    &_item {
+      padding-right: 25px;
+    }
+    &_link {
+      font-size: 13px;
+    }
+  }
+  .promo {
+    &_header {
+      font-size: 55px;
+    }
+  }
+
+  .mobile {
+    &_item {
+      width: 300px;
+      height: 260px;
+    }
+  }
+  .footer {
+    &_links {
+      width: 250px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .menu {
+    &_item {
+      padding-right: 8px;
+    }
+    &_link {
+      font-size: 11px;
+    }
+  }
+
+  header {
+    .subheader {
+      &_logo {
+        img {
+          width: 100%;
+        }
+      }
+      &_official {
+        font-size: 12px;
+      }
+      &_phone {
+        font-size: 19px;
+      }
+      &_btn {
+        width: 100%;
+        height: 40px;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .promo {
+    &_header {
+      font-size: 40px;
+    }
+    &_subheader {
+      font-size: 27px;
+    }
+  }
+
+  .benefits {
+    &_item {
+      flex-direction: column;
+    }
+    &_block {
+      margin-top: 20px;
+    }
+    .row {
+      align-items: start;
+    }
+  }
+  .car {
+    &_uber {
+      background-size: contain;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    padding-bottom: 30px;
+    &_social,
+    &_links {
+      position: static;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s all;
+    &_active {
+      left: 0;
+    }
+    &_item {
+      border: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    &_link {
+      font-size: 20px;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 12px;
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 2px;
+      transition: 0.6s all;
+    }
+    &_active {
+      span {
+        margin-bottom: -2px;
+        &:nth-child(1) {
+          transform: translateY(3px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: translateY(3px) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .xs-hidden {
+    display: none;
+  }
+  .xs-visible.subheader_phone {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5px;
+  }
+
+  header {
+    .subheader {
+      &_btn {
+        width: 200px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .promo {
+    &_header {
+      line-height: 45px;
+    }
+  }
+
+  .benefits {
+    &_block {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  header {
+    nav {
+      width: 100vw;
+    }
+    .subheader {
+      &_official {
+        display: none;
+      }
+      &_logo {
+        margin-top: 25px;
+      }
+      &_btn {
+        width: 110px;
+        height: 30px;
+        font-size: 10px;
+        margin-top: 10px;
+      }
+      &_phone.xs-visible {
+        font-weight: 400;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 10px;
+      }
+    }
+  }
+  .promo {
+    min-height: 400px;
+    padding: 101px 0 34px 0;
+    &_header {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    &_subheader {
+      font-size: 20px;
+      line-height: 25px;
+      margin-top: 33px;
+    }
+    &_descr {
+      display: none;
+    }
+    &_btn {
+      margin-top: 73px;
+      width: 210px;
+      height: 50px;
+    }
+  }
+  .menu {
+    width: 85%;
+    &_item {
+      width: 100%;
+      text-align: center;
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .benefits {
+    .title {
+      font-size: 16px;
+      margin-top: 16px;
+    }
+    &_item {
+      padding-left: 0;
+    }
+    &_round {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .mobile {
+    padding: 28px 0 21px 0;
+    .title {
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 14px;
+    }
+    .subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 9px;
+    }
+  }
+
+  .car {
+    min-height: 254px;
+    padding: 25px 0 31px 0;
+    &_cover {
+      display: none;
+    }
+    .title,
+    .subtitle {
+      display: none;
+    }
+    &_uber {
+      width: 300px;
+      height: 190px;
+      margin-top: 36px;
+    }
+    .xs-visible.car_descr {
+      display: block;
+      padding-top: 0;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 24px;
+      text-align: center;
+      color: #ffffff;
+      margin-top: 23px;
+    }
+  }
+
+  .require {
+    padding: 22px 0 30px 0;
+    .title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &_block {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  .world {
+    // position: static;
+    min-height: 360px;
+    padding: 26px 0 30px 0;
+    background: url("../img/world_bg.jpg") center center/cover no-repeat;
+    background-size: auto 360px;
+    .title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 16px;
+    }
+    .subtitle {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 11px;
+    }
+    &_link {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      bottom: 30;
+    }
+  }
+
+  .footer {
+    min-height: 254px;
+    padding: 24px 17px 29px 18px;
+
+    &_devider {
+      width: 255px;
+      height: 6px;
+    }
+    &_menu {
+      width: 100%;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    &_menu.second {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 250px;
+      height: 35px;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 11px;
+      li {
+        margin-right: 30px;
+      }
+    }
+  }
+}
